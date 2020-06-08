@@ -1,9 +1,15 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.flexbox{
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+}
+
 .item {
   border-radius: 10px;
-  background: #edf;
+  background: #EEEEEE;
   padding: 15px;
   margin: 5px;
   text-align: center;
@@ -16,12 +22,12 @@ p {
   text-align: left;
 }
 
-@media ( min-width : 600px ){
+@media ( width : 100vw ){
     .flexbox {
     display: flex;
     flex-wrap: wrap;
     }
   .item {
-    width: 25%;
+    width: 30%;
   }
 }
