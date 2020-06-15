@@ -1,0 +1,14 @@
+<div class="flexbox">
+ <p><%= @nickname %>さんの投稿一覧です</p>
+  <% @items.each do |item| %>
+  <div class="item">
+    <img src="<%= item.image %>">
+    <li>
+      <ul class="item_name">品名：<%= item.item_name %></ul>
+      <ul class="price">価格：<%= item.price %>円</ul>
+      <ul class="store">購入店：<%= item.store %></ul>
+    </li>
+      <div class="text"><%= simple_format(item.text) %></div>
+  </div>
+  <% end %>
+ </div>
