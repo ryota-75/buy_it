@@ -22,6 +22,16 @@ class ItemsController < ApplicationController
     redirect_to :root
   end
   
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    item = Item.find(params[:id])
+    item.update(item_params) if item.user_id == current_user.id
+    redirect_to :root
+  end
+  
   private
   def item_params
     # params.permit(:item_name, :price, :store, :text)
@@ -31,5 +41,5 @@ class ItemsController < ApplicationController
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
-
+  
 end

@@ -8,15 +8,19 @@
       <ul class="store">購入店：<%= item.store %></ul>
     </li>
       <div class="text"><%= simple_format(item.text) %></div>
-  </div>
+  
       <% if user_signed_in? && current_user.id == item.user_id %>
         <div class="more">
           <ul class="list">
+            <li>
+            <%= link_to '編集', "/items/#{item.id}/edit", method: :get %>
+            </li>
             <li>
               <%= link_to '削除', "/items/#{item.id}", method: :delete,data: {confirm: "本当に削除しますか？"} %>
             </li>
           </ul>
         </div>
+  </div>
       <% end %>
   <% end %>
 </div>
