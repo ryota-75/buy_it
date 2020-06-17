@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index,:show]
   
   def index
     @items = Item.includes(:user).order("created_at DESC").page(params[:page]).per(9)
@@ -30,6 +30,11 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id])
     item.update(item_params) if item.user_id == current_user.id
     redirect_to :root
+  end
+  
+  def show
+    @item = Item.find(params[:id])
+    @comments = @item.comments.includes(:user)
   end
   
   private

@@ -9,9 +9,12 @@
     </li>
       <div class="text"><%= simple_format(item.text) %></div>
   
-      <% if user_signed_in? && current_user.id == item.user_id %>
         <div class="more">
           <ul class="list">
+            <li>
+              <%= link_to '詳細', "/items/#{item.id}", method: :get %>
+            </li>
+            <% if user_signed_in? && current_user.id == item.user_id %>
             <li>
             <%= link_to '編集', "/items/#{item.id}/edit", method: :get %>
             </li>
