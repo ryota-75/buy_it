@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :move_to_index, except: :index
   
   def index
-    @items = Item.all.order("created_at DESC").page(params[:page]).per(9)
+    @items = Item.includes(:user).order("created_at DESC").page(params[:page]).per(9)
   end
   
   def new
@@ -16,6 +16,11 @@ class ItemsController < ApplicationController
     redirect_to :root
   end
   
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy if item.user_id == current_user.id
+    redirect_to :root
+  end
   
   private
   def item_params
