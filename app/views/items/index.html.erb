@@ -7,7 +7,7 @@
       <ul class="price">価格：<%= item.price %>円</ul>
       <ul class="store">購入店：<%= item.store %></ul>
     </li>
-      <div class="text"><%= simple_format(item.text) %></div>
+      <div class="text"><%= item.text %></div>
   
         <div class="more">
           <ul class="list">
@@ -21,10 +21,10 @@
             <li>
               <%= link_to '削除', "/items/#{item.id}", method: :delete,data: {confirm: "本当に削除しますか？"} %>
             </li>
+            <% end %>
           </ul>
         </div>
-  </div>
-      <% end %>
+   </div>
   <% end %>
 </div>
   <%= paginate(@items) %>

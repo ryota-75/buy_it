@@ -1,5 +1,5 @@
+<p class="first"><%= @nickname %>さんの投稿一覧です</p>
 <div class="flexbox">
- <p><%= @nickname %>さんの投稿一覧です</p>
   <% @items.each do |item| %>
   <div class="item">
     <img src="<%= item.image %>">
@@ -8,7 +8,24 @@
       <ul class="price">価格：<%= item.price %>円</ul>
       <ul class="store">購入店：<%= item.store %></ul>
     </li>
-      <div class="text"><%= simple_format(item.text) %></div>
-  </div>
+      <div class="text"><%= item.text %></div>
+  
+        <div class="more">
+          <ul class="list">
+            <li>
+              <%= link_to '詳細', "/items/#{item.id}", method: :get %>
+            </li>
+            <% if user_signed_in? && current_user.id == item.user_id %>
+            <li>
+            <%= link_to '編集', "/items/#{item.id}/edit", method: :get %>
+            </li>
+            <li>
+              <%= link_to '削除', "/items/#{item.id}", method: :delete,data: {confirm: "本当に削除しますか？"} %>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+   </div>
   <% end %>
- </div>
+</div>
+  <%= paginate(@items) %>
