@@ -11,7 +11,6 @@ class ItemsController < ApplicationController
   end
   
   def create
-    # Item.create(item_name: item_params[:item_name], price: item_params[:price],store: item_params[:store], image: item_params[:image], text: item_params[:text], user_id:current_user.id)
     Item.create(image: item_params[:image],item_name: item_params[:item_name], price: item_params[:price],store: item_params[:store], text: item_params[:text],user_id:current_user.id)
     redirect_to :root
   end

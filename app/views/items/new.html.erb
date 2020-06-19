@@ -3,15 +3,15 @@
   <div class="form">
     <dl>
       <dt>品名</dt>
-      <dd><%= f.text_field :item_name %></dd>
+      <dd><%= f.text_field :item_name,required: true, maxlength:15, style: 'width:15em;' %></dd>
        <dt>価格(税込み）</dt> 
-        <dd><%= f.text_field :price %>円</dd>
+        <dd><%= f.number_field :price,required: true, maxlength:15, style: 'width:15em;' %>円</dd>
        <dt>店名</dt>
-       <dd><%= f.text_field :store %></dd>
+       <dd><%= f.text_field :store,required: true,maxlength:15, style: 'width:15em;' %></dd>
        <dt>画像</dt>
-       <dd><%= f.file_field :image %></dd>
+       <dd><%= f.file_field :image,required: true %></dd>
        <dt>コメント</dt>
-       <dd><%= f.text_field :text, style: 'width:20em; height: 3em;'  %></dd>
+       <dd><%= f.text_area :text,required: true, maxlength:40, style: 'width:20em; height: 3em;'  %></dd>
     </dl>
   </div>
   <%= f.submit '投稿' %>
