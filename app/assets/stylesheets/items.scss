@@ -5,14 +5,14 @@
   width:100%;
   display: flex;
   justify-content: space-around;
+  margin-top:10px;
 }
 
 .item {
   border-radius: 10px;
   background: #EEEEEE;
-  padding: 15px;
+  padding: 15px 15px 10px 15px;
   margin: 5px;
-  text-align: center;
   height:30%;
 }
 
@@ -24,6 +24,9 @@ img {
 
 li {
   list-style-type: none
+}
+li ul{
+  padding-left:20%;
 }
 
 .text {
@@ -37,6 +40,8 @@ li {
 .list {
   display: flex;
   justify-content: center;
+  margin-top:5px;
+  
 }
 
 .list li{

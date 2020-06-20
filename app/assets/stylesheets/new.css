@@ -3,3 +3,29 @@
   justify-content: center;
 }
 
+.caution {
+  margin-bottom: 20px;
+  text-align:center; 
+  
+}
+
+dl dd{
+  border:1px solid;
+  margin-bottom: 20px;
+}
+
+.submit{
+  text-align:center;
+  margin:20px 0;
+  padding:0 5px;
+  line-height: 30px;
+  font-weight:bolder;
+  border-radius: 5px;
+  background: #0099FF;
+  letter-spacing:2px;
+  color:white;
+}
+
+.submit input{
+  width: 100%;
+}

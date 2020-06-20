@@ -13,8 +13,10 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
 html {
-   font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+   font-family:"Noto Sans JP", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
     box-sizing: border-box;
 }
 
@@ -24,6 +26,7 @@ html {
   line-height: 80px;
   letter-spacing: 1px;
   text-align:center;
+  margin-bottom:20px;
 }
 
 .title a{
@@ -34,19 +37,53 @@ html {
 }
 .sign-box {
   display: flex;
+  line-height: 30px;
+}
+
+.name-nav {
+  display: flex;
+  padding-left:10px;
+  width:30%;
+}
+
+.name-nav a{
+  margin-left:15px;
+  padding:0 10px;
+  font-weight:bolder;
+  border-radius: 5px;
+  background: #0099FF;
+  letter-spacing:2px;
+  color:white;
+}
+
+.menu-nav{
+  display: flex;
+  width:70%;
   justify-content: flex-end;
-  line-height: 40px;
+}
+
+.post-one{
+  padding:10px;
+  margin:0 10px;
+  color:white;
+  line-height:15px;
+  background-color:#0099FF;
+  border-radius:10px;
 }
 
 .post {
   padding:10px;
-  margin:5px;
+  margin:0 10px;
   color:#000;
-  line-height:20px;
-  background-color:#FFDBC9;
+  line-height:16px;
+  background-color:#3399FF;
   border-radius:10px;
 }
 
 .sign-box a{
-    text-decoration: none; 
+  text-decoration: none; 
+}
+
+footer{
+  text-align:center;
 }

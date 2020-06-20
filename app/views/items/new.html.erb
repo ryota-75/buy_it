@@ -1,6 +1,6 @@
 <div class="form">
   <%= form_for @item do |f| %>
-  <div class="form">
+<div class="caution" h4>品名、価格、店名は15文字</br>コメントは40字以内で入力して下さい</h4></div>
     <dl>
       <dt>品名</dt>
       <dd><%= f.text_field :item_name,required: true, maxlength:15, style: 'width:15em;' %></dd>
@@ -13,7 +13,6 @@
        <dt>コメント</dt>
        <dd><%= f.text_area :text,required: true, maxlength:40, style: 'width:20em; height: 3em;'  %></dd>
     </dl>
-  </div>
-  <%= f.submit '投稿' %>
+  <div class="submit"><%= f.submit '投稿' %></div>
 <% end %>
 </div>
