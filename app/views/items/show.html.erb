@@ -1,0 +1,43 @@
+<div class="flexbox">
+  <div class="user_item">
+    <img src="<%= @item.image %>">
+    <li>
+      <ul class="item_name">品名：<%= @item.item_name %></ul>
+      <ul class="price">価格：<%= @item.price %>円</ul>
+      <ul class="store">購入店：<%= @item.store %></ul>
+    </li>
+      <div class="text"><%= simple_format(@item.text) %></div>
+
+        <div class="more">
+          <ul class="list">
+            <li>
+            <%= link_to '編集', "/items/#{@item.id}/edit", method: :get %>
+            </li>
+            <li>
+              <%= link_to '削除', "/items/#{@item.id}", method: :delete,data: {confirm: "本当に削除しますか？"} %>
+            </li>
+          </ul>
+        </div>
+  </div>
+    <div class="container"> 
+    <% if current_user %>
+      <%= form_tag("/items/#{@item.id}/comments", method: :post) do %>
+      <dl>
+        <dt><textarea name="text" placeholder="コメントする？(40文字まで)" rows="2" cols="40" maxlength="40"></textarea></dt>
+        <dt><input type="submit" value="コメント！"></dt>
+      </dl>
+      <% end %>
+    <% end %>
+     <div class="comments">   
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="edit-form">
+ <div class="center">
+  <%= form_for @item do |f| %>
+ <div class="caution" h4>品名、価格、店名は15文字</br>コメントは40字以内で入力して下さい</h4></div>
+    <dl>
+      <dt>品名</dt>
+      <dd><%= f.text_field :item_name,required: true, maxlength:15, style: 'width:15em;' %></dd>
+       <dt>価格(税込み）</dt> 
+        <dd><%= f.number_field :price,required: true, maxlength:15, style: 'width:15em;' %>円</dd>
+       <dt>店名</dt>
+       <dd><%= f.text_field :store,required: true,maxlength:15, style: 'width:15em;' %></dd>
+       <dt>現在の画像</dt>
+       <img src="<%= @item.image %>" class="edit-img"/>
+       <dt>＜画像を変更する場合は選択して下さい＞</dt>
+       <dd><%= f.file_field :image %></dd>
+       <dt>コメント</dt>
+       <dd><%= f.text_area :text,required: true, maxlength:40, style: 'width:20em; height: 3em;'  %></dd>
+    </dl>
+  <div class="submit"><%= f.submit '編集' %></div>
+  <% end %>
+  </div>
+</div>

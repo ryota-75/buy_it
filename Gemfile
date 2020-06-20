@@ -66,3 +66,6 @@ gem 'devise-i18n-views'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'mini_magick'
+group :production do
+  gem 'rails_12factor'
+end

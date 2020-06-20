@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BuyIt</title>
+    <title>BuyIt・それ、買おう</title>
     <meta charset="UTF-8" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,7 +14,7 @@
   <body>
       <header>
       <div class="main">
-        <div class="title"><a href="/">何、買おう</a></div>
+        <div class="title"><a href="/">それ、買おう</a></div>
         <% if user_signed_in? %>
         <div class="sign-box">
           <div class="name-nav">
@@ -23,7 +23,6 @@
           </div>
           <div class="menu-nav">
             <%= link_to "投稿！",  new_item_path, class: "post-one" %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"post" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"post" %>
           </div>
         </div>

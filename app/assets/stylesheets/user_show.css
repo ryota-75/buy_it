@@ -1,0 +1,25 @@
+.user_item{
+  width:42%;
+  border-radius: 10px;
+  background: #EEEEEE;
+  padding: 15px 0;
+  margin: 0 4%;
+}
+
+.container{
+  width:50%;
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+  object-fit: scale-down;
+}
+
+textarea{
+  border:1px solid;
+}
+
+dt input{
+  margin-left: 10em;
+}
