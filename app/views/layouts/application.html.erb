@@ -20,8 +20,6 @@
           <div class="name-nav">
             <h2>ようこそ-<%= current_user.nickname %>-さん</h2>
             <a href="/users/<%= current_user.id %>">過去の投稿</a>
-          </div>
-          <div class="menu-nav">
             <%= link_to "投稿！",  new_item_path, class: "post-one" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"post" %>
           </div>
