@@ -4,4 +4,5 @@ class UsersController < ApplicationController
     @nickname = user.nickname
     @items = user.items.page(params[:page]).per(6).order("created_at DESC")
   end
+  
 end
