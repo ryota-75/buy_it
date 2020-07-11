@@ -1,3 +1,16 @@
 .first{
   margin-left: 10px;
 }
+/*media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+
+body > div > div.container > form > dl > dt:nth-child(1) > textarea{
+ width: 70%;
+}
+body > div > div.container > form > dl > dt:nth-child(2) > input[type=submit]{
+ margin-left: 4em;
+}
+
+
+}
