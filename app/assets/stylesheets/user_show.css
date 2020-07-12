@@ -45,8 +45,16 @@ input[type=submit]{
 }
 
 .container{
-  width:100%;
   flex-direction: column;
+}
+
+dt input{
+  /*margin-left: 8em;*/
+  border-radius: 10px;
+  background: #0099FF;
+  letter-spacing:2px;
+  padding:3px 10px 5px 10px;
+  font-weight:bolder;
 }
 
   
