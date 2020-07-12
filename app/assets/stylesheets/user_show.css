@@ -70,7 +70,7 @@ input[type=submit]{
     background-color: snow;  
     width: 90%;             /* 横幅いっぱいにする */
     box-sizing: border-box;  /* ※これがないと横にはみ出る */
-    height: 3em;           
+    height: 4em;           
     font-size: 1em;          /* 文字サイズ */
     line-height: 1.2;
 }
