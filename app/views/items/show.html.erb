@@ -28,7 +28,7 @@
     <% if current_user %>
       <%= form_tag("/items/#{@item.id}/comments", method: :post) do %>
       <dl>
-        <dt><textarea name="text" placeholder="コメントする？(40文字まで)" rows="2" cols="40" maxlength="40"></textarea></dt>
+        <dt><textarea name="text"  class="commentlines" placeholder="コメントする？(40文字まで)" rows="2" cols="40" maxlength="40"></textarea></dt>
         <dt><input type="submit" value="コメント！"></dt>
       </dl>
       <% end %>

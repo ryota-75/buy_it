@@ -29,6 +29,18 @@ dt input{
   font-weight:bolder;
 }
 
+.commentlines{
+    border: 2px solid #0a0;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    background-color: snow;  /* 背景色 */
+    width: 100%;             /* 横幅いっぱいにする */
+    box-sizing: border-box;  /* ※これがないと横にはみ出る */
+    height: 120px;           /* 高さ */
+    font-size: 1em;          /* 文字サイズ */
+    line-height: 1.2;
+}
+
 input[type=submit]{
   color: white;
 }
@@ -45,7 +57,22 @@ input[type=submit]{
 }
 
 .container{
+  width:100%;
+  display: flex;
   flex-direction: column;
+}
+
+.commentlines{
+    border: 2px solid #0a0;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    margin:1em;
+    background-color: snow;  
+    width: 90%;             /* 横幅いっぱいにする */
+    box-sizing: border-box;  /* ※これがないと横にはみ出る */
+    height: 3em;           
+    font-size: 1em;          /* 文字サイズ */
+    line-height: 1.2;
 }
 
 dt input{
