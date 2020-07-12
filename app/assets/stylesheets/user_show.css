@@ -32,3 +32,22 @@ dt input{
 input[type=submit]{
   color: white;
 }
+
+/*media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+.user_item{
+  width:100%;
+  border-radius: 10px;
+  background: #EEEEEE;
+  padding: 15px 0;
+  margin: 0 4%;
+}
+
+.container{
+  width:100%;
+  flex-direction: column;
+}
+
+  
+}

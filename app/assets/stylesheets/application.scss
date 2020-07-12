@@ -110,7 +110,7 @@ footer{
 }
 .sign-box {
   display: flex;
-  line-height: 20px;
+  line-height: 10px;
 }
 
 .name-nav, .nemu-nav {
@@ -120,13 +120,14 @@ footer{
 }
 
 .name-nav a, .post-one, .post{
-  margin-left:15px;
-  padding:3px 10px 5px 10px;
+  margin-left:10px;
+  padding:3px 5px 2.5px 5px;
   font-weight:bolder;
   border-radius: 10px;
   background: #0099FF;
   letter-spacing:1px;
   color:white;
+  font-size:0.5em;
 }
 
 h2{
